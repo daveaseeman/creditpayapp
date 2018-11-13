@@ -9,11 +9,15 @@ app = Flask(__name__)
 @app.route("/")
 def index():
     invoice_url = request.args.get('invoice_url')
-    payment_url = None
     if invoice_url:
-        payment_url = get_payment_url(invoice_url)
-        print(payment_url)
-    return redirect(payment_url)
+        payment_url = None
+        if invoice_url:
+            payment_url = get_payment_url(invoice_url)
+            print(payment_url)
+        return redirect(payment_url)
+    else:
+        return "Error: please return to invoice"
+
 
 
 if __name__ == "__main__":

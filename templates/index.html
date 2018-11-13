@@ -1,0 +1,19 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+    <body>
+        {% if payment_url %}
+        <div>
+            <a href="{{ payment_url }}" class="center-align vertical-align">Pay with credit</a><br />
+        </div>
+        {% else %}
+        <div>
+            error
+        </div>
+        {% endif %}
+        <!-- javascript -->
+        <script src="https://use.fontawesome.com/8f6878caa0.js"></script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script></head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+    </body>
+</html>
